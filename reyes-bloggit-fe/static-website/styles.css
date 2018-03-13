@@ -1,0 +1,35 @@
+li.post     { list-style-type: none; 
+               background:#ccddff; 
+               border: solid 1px; 
+               border-color:red;
+               margin:5px 10px 5px 10px; 
+               padding: 15px; 
+               }
+
+
+#bloggit {
+   background:#ffffff;
+}
+
+h1 {
+   color:#66ccff;
+   background: url("download.png") no-repeat;
+   background-size: 30px 30px;
+   padding-left: 35px;
+}
+
+body{
+    background: #666666;
+}
+
+.button-row {
+    text-align:right;
+}
+
+.more {
+    display: inline-block;
+    background-color: #66ccff;
+    border: solid 1px black;
+    padding: 5px;
+    
+}

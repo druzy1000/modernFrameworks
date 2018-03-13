@@ -1,0 +1,64 @@
+<html>
+   <head>
+       <title>Bloggit - Posts</title>
+       <link rel="stylesheet" type="text/css" href="styles.css"></link>
+            <script>
+              var initialize = function () {
+   var posts = document.getElementsByTagName("li");
+   for (var i = 0; i < posts.length; i++) {
+       var paragraphs = posts[i].getElementsByTagName('p');
+       paragraphs[1].style.display = "none";
+       var buttonRow = document.createElement('div');
+       buttonRow.className = 'button-row';
+       var moreButton = document.createElement('div');
+       moreButton.textContent = 'More...';
+       moreButton.className = 'more';
+       moreButton.onclick = clickMore;
+       buttonRow.appendChild(moreButton);
+       posts[i].appendChild(buttonRow);
+   }
+};
+
+    var clickMore = function() {
+   var post = this.parentElement.parentElement;
+   var paragraphs = post.getElementsByTagName('p');
+   if (paragraphs[1].style.display === "none") {
+       paragraphs[1].style.display = 'block';
+   } else {
+       paragraphs[1].style.display = 'none';
+   }
+}
+            </script>
+    
+    </head>
+   
+   <body onload="initialize();">
+        <h1>Bloggit</h1>
+        <h2>Posts</h2>
+        <p>Select a post from the list below:</p>
+        <ul>
+          <li class="post">
+
+               <p><a href ="post1.html"><b>A first post</b></a></b></p>
+               <p><em>This is the body of our first blog post.</em></p>
+               <div><div>More</div> </div>
+           </li>
+
+            <li class="post">
+               <p><a>A second post</a></p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan erat nec justo tempor, ut posuere nisl pretium. Morbi rutrum mauris eu turpis convallis iaculis. </p>
+           </li>
+
+           <li class="post">
+             <p><a>Another long post</a></p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas massa orci, dapibus ut dolor sed, venenatis viverra risus.</p>
+           </li>
+
+           <li class="post">
+               <p><a>A fourth post</a></p>
+               <p>This is the body of our fourth blog post.</p>
+           </li>
+
+       </ul>
+   </body>
+</html>
